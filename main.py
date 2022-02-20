@@ -56,7 +56,7 @@ def main():
             
             #Using CKIP to break off words
             for p in target:
-                if len(p.text) > bias:
+                if len(p.text) > int(bias/4):
                     ws = WS('./data')
                     ws_results = ws([p.text])
                     for w in ws_results:
